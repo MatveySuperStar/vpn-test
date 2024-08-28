@@ -1,8 +1,15 @@
 "use client";
-import { lockScroll } from "@/lib/helper";
+import { lockScroll, randomInteger } from "@/lib/helper";
 import Button from "@/ui/Button";
 import CheckBox from "@/ui/CheckBox";
-import React, { FC, FormEvent, useCallback, useMemo, useState } from "react";
+import React, {
+  FC,
+  FormEvent,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 import dynamic from "next/dynamic";
 
 const FeedbackModal = dynamic(
@@ -11,8 +18,12 @@ const FeedbackModal = dynamic(
 );
 
 const ChooseNameForm: FC<{ users: string[] | [] }> = ({ users }) => {
-  const [activeName, setActiveName] = useState<string>(users[1]);
+  const [activeName, setActiveName] = useState<string>("");
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    setActiveName(users[randomInteger(0, 2)]);
+  }, [users]);
 
   const changeActiveName = useCallback(
     (name: string) => setActiveName(name),
