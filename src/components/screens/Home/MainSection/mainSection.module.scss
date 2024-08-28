@@ -1,0 +1,28 @@
+.main {
+  @apply flex flex-col gap-6 items-center max-md:w-[calc(100%-32px)];
+
+  .wrapperInfographics {
+    @apply shadow-default w-full h-[80px] rounded-2xl flex items-center justify-center;
+
+    .infographics {
+      @apply grid grid-cols-2 max-md:px-[42.5px] md:max-w-[415px] w-full relative;
+
+      &:after {
+        content: "";
+        @apply absolute h-[calc(100%-18px)] w-[0.92px] -translate-x-1/2 left-1/2 top-1/2 -translate-y-1/2 bg-grey;
+      }
+
+      .card {
+        @apply flex items-center gap-[10px];
+
+        &:first-child {
+          @apply mr-auto;
+        }
+
+        &:last-child {
+          @apply ml-auto;
+        }
+      }
+    }
+  }
+}

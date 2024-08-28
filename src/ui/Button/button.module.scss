@@ -1,0 +1,27 @@
+.main-button {
+  @apply flex items-center justify-center w-full duration-500 relative h-[64px] rounded-2xl text-white bg-orange;
+
+  &:active {
+    @apply scale-95;
+  }
+
+  &.orange {
+    @media (max-width: 1024) {
+      &:hover {
+        @apply bg-yellow;
+      }
+    }
+
+    &:disabled {
+      @apply bg-grey;
+    }
+  }
+
+  &.blue {
+    @apply bg-blue rounded-3xl h-[40px];
+
+    &:disabled {
+      @apply bg-grey;
+    }
+  }
+}

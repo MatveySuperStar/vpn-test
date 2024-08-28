@@ -1,0 +1,7 @@
+.header {
+  @apply shadow-default h-[76px] w-full mb-[13px] lg:mb-[75px] sticky top-0 bg-white z-[99] left-0 flex items-center;
+
+  & > div {
+    @apply flex justify-between items-center w-full max-w-[1580px] mx-auto;
+  }
+}

@@ -1,0 +1,27 @@
+.checkbox {
+  @apply flex gap-3 items-center cursor-pointer;
+
+  & .container {
+    @apply relative select-none;
+
+    input {
+      @apply absolute opacity-0;
+    }
+
+    .checkmark {
+      @apply relative block w-6 h-6 rounded-full border-[2px] border-grey overflow-hidden;
+
+      & > img {
+        @apply absolute top-1/2 -translate-y-1/2 -translate-x-1/2 left-1/2 duration-200  opacity-0 z-[2] brightness-100 invert;
+      }
+    }
+
+    & > :where(input:checked) ~ .checkmark {
+      @apply bg-orange border-orange;
+
+      & > img {
+        @apply opacity-100;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.advatages {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-y-2 px-2;
+
+  & > div {
+    @apply flex flex-col gap-4 lg:gap-2 items-center text-center py-4 border-t border-t-grey;
+
+    &:where(:nth-child(3), :nth-child(4)) {
+      @apply md:border-b md:border-b-grey;
+    }
+
+    &:last-child {
+      @apply max-md:border-b max-md:border-b-grey;
+    }
+
+    & > div {
+      @apply flex flex-col gap-2;
+    }
+  }
+}

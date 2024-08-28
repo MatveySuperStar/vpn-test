@@ -5,13 +5,19 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/ui/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        blue: "var(--blue)",
+        orange: "var(--orange)",
+        black: "var(--black)",
+        grey: "var(--grey)",
+        yellow: "var(--yellow)",
+      },
+      boxShadow: {
+        default: "0px 2.09px 11.06px 0px #00000040",
       },
     },
   },

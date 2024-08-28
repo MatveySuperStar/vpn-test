@@ -1,0 +1,7 @@
+.default-input {
+  @apply border border-grey rounded-2xl px-4 h-[54px] w-full;
+
+  &.error {
+    @apply border-red-600 text-red-600;
+  }
+}

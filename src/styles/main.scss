@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./fonts.scss";
+
+:root {
+  --blue: #3177f2;
+  --orange: #ff5d17;
+  --black: #2b2b2b;
+  --grey: #646464;
+  --yellow: #ff8317;
+}
+
+section,
+header {
+  @apply px-4;
+}
+
+section {
+  @apply mb-[40px] lg:mb-[72px];
+  & > div {
+    @apply max-w-[892px] mx-auto;
+  }
+
+  &:last-child {
+    @apply mb-[37px] lg:mb-[93px];
+  }
+}
